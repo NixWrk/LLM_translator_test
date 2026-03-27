@@ -1,0 +1,50 @@
+{"id": "w001", "src_lang": "en", "tgt_lang": "ru", "source": "compiler", "reference": "компилятор"}
+{"id": "w002", "src_lang": "en", "tgt_lang": "ru", "source": "bandwidth", "reference": "пропускная способность"}
+{"id": "w003", "src_lang": "en", "tgt_lang": "ru", "source": "latency", "reference": "задержка"}
+{"id": "w004", "src_lang": "en", "tgt_lang": "ru", "source": "throughput", "reference": "производительность"}
+{"id": "w005", "src_lang": "en", "tgt_lang": "ru", "source": "cache", "reference": "кэш"}
+{"id": "w006", "src_lang": "en", "tgt_lang": "ru", "source": "firmware", "reference": "прошивка"}
+{"id": "w007", "src_lang": "en", "tgt_lang": "ru", "source": "interrupt", "reference": "прерывание"}
+{"id": "w008", "src_lang": "en", "tgt_lang": "ru", "source": "scheduler", "reference": "планировщик"}
+{"id": "w009", "src_lang": "en", "tgt_lang": "ru", "source": "semaphore", "reference": "семафор"}
+{"id": "w010", "src_lang": "en", "tgt_lang": "ru", "source": "kernel", "reference": "ядро"}
+{"id": "w011", "src_lang": "en", "tgt_lang": "ru", "source": "overhead", "reference": "накладные расходы"}
+{"id": "w012", "src_lang": "en", "tgt_lang": "ru", "source": "bottleneck", "reference": "узкое место"}
+{"id": "w013", "src_lang": "en", "tgt_lang": "ru", "source": "deployment", "reference": "развёртывание"}
+{"id": "w014", "src_lang": "en", "tgt_lang": "ru", "source": "checksum", "reference": "контрольная сумма"}
+{"id": "w015", "src_lang": "en", "tgt_lang": "ru", "source": "handshake", "reference": "квитирование"}
+{"id": "w016", "src_lang": "en", "tgt_lang": "ru", "source": "pipeline", "reference": "конвейер"}
+{"id": "w017", "src_lang": "en", "tgt_lang": "ru", "source": "routing", "reference": "маршрутизация"}
+{"id": "w018", "src_lang": "en", "tgt_lang": "ru", "source": "encryption", "reference": "шифрование"}
+{"id": "w019", "src_lang": "en", "tgt_lang": "ru", "source": "debugging", "reference": "отладка"}
+{"id": "w020", "src_lang": "en", "tgt_lang": "ru", "source": "concurrency", "reference": "параллелизм"}
+{"id": "w021", "src_lang": "en", "tgt_lang": "ru", "source": "scalability", "reference": "масштабируемость"}
+{"id": "w022", "src_lang": "en", "tgt_lang": "ru", "source": "resilience", "reference": "отказоустойчивость"}
+{"id": "w023", "src_lang": "en", "tgt_lang": "ru", "source": "abstraction", "reference": "абстракция"}
+{"id": "w024", "src_lang": "en", "tgt_lang": "ru", "source": "profiling", "reference": "профилирование"}
+{"id": "w025", "src_lang": "en", "tgt_lang": "ru", "source": "payload", "reference": "полезная нагрузка"}
+{"id": "w026", "src_lang": "ru", "tgt_lang": "en", "source": "компьютер", "reference": "computer"}
+{"id": "w027", "src_lang": "ru", "tgt_lang": "en", "source": "программа", "reference": "program"}
+{"id": "w028", "src_lang": "ru", "tgt_lang": "en", "source": "сеть", "reference": "network"}
+{"id": "w029", "src_lang": "ru", "tgt_lang": "en", "source": "память", "reference": "memory"}
+{"id": "w030", "src_lang": "ru", "tgt_lang": "en", "source": "файл", "reference": "file"}
+{"id": "w031", "src_lang": "ru", "tgt_lang": "en", "source": "сервер", "reference": "server"}
+{"id": "w032", "src_lang": "ru", "tgt_lang": "en", "source": "процессор", "reference": "processor"}
+{"id": "w033", "src_lang": "ru", "tgt_lang": "en", "source": "браузер", "reference": "browser"}
+{"id": "w034", "src_lang": "ru", "tgt_lang": "en", "source": "клавиатура", "reference": "keyboard"}
+{"id": "w035", "src_lang": "ru", "tgt_lang": "en", "source": "монитор", "reference": "monitor"}
+{"id": "w036", "src_lang": "ru", "tgt_lang": "en", "source": "алгоритм", "reference": "algorithm"}
+{"id": "w037", "src_lang": "ru", "tgt_lang": "en", "source": "база данных", "reference": "database"}
+{"id": "w038", "src_lang": "ru", "tgt_lang": "en", "source": "протокол", "reference": "protocol"}
+{"id": "w039", "src_lang": "ru", "tgt_lang": "en", "source": "интерфейс", "reference": "interface"}
+{"id": "w040", "src_lang": "ru", "tgt_lang": "en", "source": "обновление", "reference": "update"}
+{"id": "w041", "src_lang": "ru", "tgt_lang": "en", "source": "установка", "reference": "installation"}
+{"id": "w042", "src_lang": "ru", "tgt_lang": "en", "source": "резервное копирование", "reference": "backup"}
+{"id": "w043", "src_lang": "ru", "tgt_lang": "en", "source": "восстановление", "reference": "recovery"}
+{"id": "w044", "src_lang": "ru", "tgt_lang": "en", "source": "шифрование", "reference": "encryption"}
+{"id": "w045", "src_lang": "ru", "tgt_lang": "en", "source": "маршрутизатор", "reference": "router"}
+{"id": "w046", "src_lang": "ru", "tgt_lang": "en", "source": "операционная система", "reference": "operating system"}
+{"id": "w047", "src_lang": "ru", "tgt_lang": "en", "source": "виртуализация", "reference": "virtualization"}
+{"id": "w048", "src_lang": "ru", "tgt_lang": "en", "source": "контейнер", "reference": "container"}
+{"id": "w049", "src_lang": "ru", "tgt_lang": "en", "source": "отладчик", "reference": "debugger"}
+{"id": "w050", "src_lang": "ru", "tgt_lang": "en", "source": "компилятор", "reference": "compiler"}

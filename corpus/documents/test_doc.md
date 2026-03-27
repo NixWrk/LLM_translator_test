@@ -1,0 +1,219 @@
+# Fundamentals of Computer Architecture and System Software
+
+## 1. Introduction
+
+Computer architecture is the discipline concerned with the design, organization, and behavior of the components
+that make up a computing system. At its most fundamental level, a computer consists of a processor that executes
+instructions, memory that stores data and programs, and input/output devices that connect the machine to the
+outside world. The interaction between these components, governed by protocols and interfaces defined at design
+time, determines the overall performance, power consumption, and capability of the system.
+
+Modern computers are built upon decades of accumulated engineering knowledge. The stored-program concept,
+formalized by John von Neumann in 1945, established the architectural template that still underlies most
+computers today: instructions and data reside together in the same memory space, and the processor fetches,
+decodes, and executes one instruction after another in sequence, occasionally branching to non-sequential
+addresses. Although this model has been extended and optimized in countless ways — through pipelining,
+superscalar execution, out-of-order processing, and speculative execution — its fundamental structure
+remains recognizable.
+
+Understanding computer architecture is essential for software engineers who want to write efficient code,
+for system administrators who need to configure hardware, and for anyone who builds or maintains software
+infrastructure. Even when working at a high level of abstraction, decisions about data structures, memory
+access patterns, and concurrency are ultimately constrained by the properties of the underlying hardware.
+
+## 2. The Central Processing Unit
+
+The central processing unit (CPU) is the engine of the computer. It retrieves instructions from memory,
+decodes them to determine what operation is required, and executes that operation using its internal
+functional units. This fetch-decode-execute cycle runs continuously at a rate determined by the processor's
+clock frequency, which in modern chips typically ranges from 3.0 GHz to 5.5 GHz.
+
+A modern processor contains multiple execution cores, each capable of running an independent thread of
+execution. A high-end desktop CPU may have 8, 12, or even 24 cores, while server processors can exceed
+100 cores per chip. Each core contains an arithmetic logic unit (ALU) for integer operations, a
+floating-point unit (FPU) for fractional and real-number arithmetic, a set of fast storage locations
+called registers, and dedicated control logic.
+
+To bridge the speed gap between the processor and main memory, CPUs contain several levels of cache.
+The L1 cache, integrated directly into each core, is the fastest and smallest, typically 32 to 64 KB.
+The L2 cache, slightly slower but larger at 256 KB to 1 MB per core, serves as a secondary buffer.
+The L3 cache is shared among all cores on the chip and ranges from 8 MB in budget processors to 64 MB
+or more in workstation-class chips. When the processor needs data, it first checks L1, then L2, then L3,
+and finally issues a request to main memory if the data is not found in any cache level.
+
+Two key techniques boost the throughput of the instruction pipeline. Branch prediction estimates, in
+advance, which path a conditional branch will take, allowing the processor to fetch and begin executing
+instructions before the condition is evaluated. Out-of-order execution allows the processor to execute
+independent instructions in a different order from their appearance in the program, keeping the execution
+units busy even when some instructions are waiting for data.
+
+## 3. Memory Systems
+
+Memory in a computer system is organized as a hierarchy, trading off speed, capacity, and cost at each
+level. At the top of the hierarchy sit the processor registers: a few dozen 64-bit locations that operate
+at the full clock speed of the CPU and can be read or written in a single cycle. Below the registers are
+the cache levels described above, followed by main memory, solid-state or hard-disk storage, and finally
+networked or cloud storage.
+
+Main memory, implemented as dynamic random-access memory (DRAM), is the working space of running
+programs. A modern workstation typically contains 16 to 128 GB of RAM organized in dual-channel or
+quad-channel configurations to increase memory bandwidth. The current DDR5 standard supports transfer
+rates between 4,800 MT/s and 8,400 MT/s per channel, providing a theoretical peak bandwidth in the range
+of 50 to 100 GB/s for a dual-channel system.
+
+Although DRAM is much slower than cache — a cache miss that requires accessing main memory typically
+costs 50 to 100 CPU cycles — it is far faster than secondary storage. A high-end NVMe solid-state drive
+achieves sequential read speeds of around 7,000 MB/s, but random access latency is measured in
+microseconds rather than nanoseconds. Magnetic hard drives are slower still, with random-access latency
+in the range of 5 to 10 milliseconds.
+
+Virtual memory is an abstraction that allows each process to operate as though it has exclusive access
+to a large, contiguous address space, regardless of how much physical memory is actually available. The
+operating system maps virtual addresses to physical addresses through a data structure called a page table.
+When a process accesses a virtual address that is not backed by physical memory, the OS raises a page
+fault, loads the required data from disk, and resumes the process. This mechanism enables the system to
+run programs whose combined memory requirements exceed the available physical RAM, at the cost of
+significantly increased latency whenever disk access is required.
+
+## 4. Input/Output and Storage
+
+Input/output (I/O) devices connect the computer to the outside world, allowing it to receive data from
+keyboards, mice, network interfaces, sensors, and cameras, and to send data to displays, printers,
+speakers, and network links. I/O devices communicate with the processor through controllers, which
+translate between the device-specific signaling and the bus protocols used inside the computer.
+
+The Peripheral Component Interconnect Express (PCIe) bus is the dominant interconnect for high-speed
+devices in modern PCs and servers. PCIe 5.0, the current generation, provides a bandwidth of 4 GB/s
+per lane. A device using 16 lanes — typical for a graphics card — therefore has a peak bandwidth of
+64 GB/s in each direction.
+
+Storage devices retain data even when power is removed, in contrast to volatile main memory. NVMe
+solid-state drives connect directly to the PCIe bus, bypassing the older SATA interface and achieving
+much higher throughput and lower latency. NAND flash memory, the technology underlying SSDs, stores
+data as charge levels in floating-gate transistors organized into cells. Modern 3D NAND stacks over
+200 layers of cells vertically to achieve capacities of several terabytes per drive.
+
+Direct memory access (DMA) allows I/O devices to transfer data directly to or from main memory without
+involving the CPU for each transfer. The device signals an interrupt when the transfer is complete,
+and the CPU then processes the received data. DMA is essential for achieving the full potential
+bandwidth of modern storage and network devices, since even a fast CPU cannot sustain the data rates
+required for a 100 Gbps network interface using programmed I/O.
+
+## 5. Computer Networks
+
+A computer network is a system of interconnected nodes that exchange data according to agreed-upon
+protocols. The internet, the largest network in existence, is an interconnection of millions of smaller
+networks operated by organizations, governments, and service providers. Its architecture follows the
+TCP/IP model, which divides the communication problem into four layers: the link layer handles local
+delivery over a single network segment, the internet layer routes packets across multiple networks using
+IP addresses, the transport layer provides end-to-end reliability (TCP) or low-overhead delivery (UDP),
+and the application layer contains protocols like HTTP, SMTP, and DNS that serve specific user needs.
+
+Local area networks (LANs) connect devices within a building or campus. Wired Ethernet, standardized
+as IEEE 802.3, is the dominant LAN technology, with current deployments offering 1 Gbps to 100 Gbps
+per port. Wi-Fi, standardized as IEEE 802.11, provides wireless connectivity with current-generation
+Wi-Fi 7 delivering aggregate throughput over 40 Gbps in ideal conditions, though real-world performance
+is lower due to interference, distance, and the shared nature of the radio medium.
+
+Security in computer networks involves multiple layers of defense. Transport Layer Security (TLS)
+encrypts application-layer data between endpoints, protecting it from eavesdropping and tampering.
+Firewalls filter traffic based on source address, destination address, port, and protocol. Intrusion
+detection systems analyze network traffic for patterns that suggest malicious activity. Virtual private
+networks (VPNs) create encrypted tunnels across untrusted networks, allowing remote users to access
+internal resources securely.
+
+Network performance is characterized by three key metrics: bandwidth, the maximum rate at which data
+can be transferred; latency, the time required for a packet to travel from source to destination; and
+packet loss, the fraction of packets that are dropped due to congestion or errors. For interactive
+applications such as voice and video conferencing, latency below 150 ms is generally required for
+acceptable quality. For bulk data transfer, bandwidth and loss rate are more important than latency.
+
+## 6. Operating Systems
+
+An operating system (OS) is the layer of software that manages the hardware resources of a computer
+and provides a stable, convenient interface for application programs. Without an OS, each application
+would need to contain its own code for interacting with every piece of hardware it might use — an
+impossible burden that would also make it impossible for multiple programs to share the same machine.
+
+The most important resource the OS manages is the processor. The scheduler decides which process or
+thread runs on each core at each moment, balancing competing objectives: responsiveness (interactive
+tasks should receive CPU time quickly), throughput (background work should complete efficiently), and
+fairness (no process should starve). Modern schedulers are preemptive: they can interrupt a running
+process and switch to another without the cooperation of the running process, using a hardware timer
+to trigger the switch.
+
+Memory management is the second major OS responsibility. The OS maintains the page tables that implement
+virtual memory, allocates physical memory pages to processes, and handles page faults. It also provides
+the heap allocator that application programmers use through functions like malloc and free. Efficient
+memory management is critical for system performance; memory leaks and fragmentation can degrade
+performance over time and cause programs to fail.
+
+The file system provides an organized, persistent store for data. Files are named sequences of bytes
+stored on a storage device. Directories organize files into a hierarchical namespace. The file system
+maintains metadata about each file — its name, size, creation time, modification time, and access
+permissions — and implements the operations that applications use: create, read, write, delete, rename,
+and change permissions. Modern file systems include journaling, which records pending changes before
+committing them, so that a crash during a write operation does not corrupt the file system structure.
+
+## 7. Performance and Optimization
+
+Measuring and improving computer performance is both an art and a science. The most important
+principle is that optimization should be guided by measurement: tools called profilers record where
+a program spends its time, which functions are called most often, and where memory is most heavily
+allocated. Optimizing code that is not a bottleneck wastes effort and can introduce bugs.
+
+Memory access patterns have a profound effect on performance. Modern processors are far faster than
+main memory, and a program that repeatedly accesses data scattered through a large memory region will
+spend most of its time waiting for cache misses. Reorganizing data structures to improve spatial
+locality — keeping related data close together in memory — can reduce cache miss rates dramatically
+and yield speedups of 5x or more without changing the algorithm at all.
+
+Parallel execution on multi-core processors offers another avenue for speedup, but it introduces
+complexity. Shared data must be protected from concurrent modification using synchronization primitives.
+Locks introduce contention and can cause threads to block while waiting. Lock-free algorithms use
+atomic hardware instructions to achieve thread safety without blocking, but are difficult to design
+correctly. The degree to which a program can benefit from multiple cores is limited by the fraction
+of its execution that must remain sequential, a constraint formalized by Amdahl's Law.
+
+Power consumption is increasingly important as a performance metric. In mobile devices and large data
+centers alike, energy efficiency directly affects battery life and operating costs. Dynamic voltage
+and frequency scaling (DVFS) allows processors to reduce their clock speed and supply voltage during
+periods of low load, reducing power consumption quadratically with clock speed. Modern chips combine
+high-performance cores with efficiency cores optimized for low power, choosing dynamically which type
+of core to use based on the current workload.
+
+## Table 1. Processor Specifications
+
+| Processor | Cores | Base Freq (GHz) | L3 Cache (MB) | TDP (W) | Architecture |
+| --- | --- | --- | --- | --- | --- |
+| Intel Core i9-14900K | 24 (8P+16E) | 3.2 | 36 | 125 | Raptor Lake |
+| AMD Ryzen 9 7950X | 16 | 4.5 | 64 | 170 | Zen 4 |
+| Intel Xeon w9-3595X | 60 | 2.5 | 75 | 350 | Sapphire Rapids |
+| AMD EPYC 9654 | 96 | 2.4 | 384 | 360 | Genoa |
+| Apple M3 Max | 16 (12P+4E) | 4.05 | 48 | 92 | ARM v8.6 |
+| Qualcomm Snapdragon X | 12 | 3.8 | 42 | 23 | Oryon |
+
+## Code Example: Reading CPU Info
+
+The following Python snippet retrieves basic CPU information:
+
+```python
+import psutil
+import platform
+
+cpu_count = psutil.cpu_count(logical=True)
+cpu_freq = psutil.cpu_freq()
+print(f'Logical CPUs : {cpu_count}')
+print(f'Max frequency: {cpu_freq.max:.0f} MHz')
+print(f'Architecture : {platform.machine()}')
+```
+
+## Conclusion
+
+Computer architecture, memory systems, networking, and operating systems together form the substrate on
+which all software runs. Proficiency in these areas helps engineers make better decisions at every level
+of the stack, from the choice of data structures to the design of distributed systems. The field continues
+to evolve rapidly: chiplet-based designs decompose a processor into separately manufactured tiles;
+processing-in-memory architectures move computation closer to data; neuromorphic and quantum processors
+explore fundamentally different computational models. Despite this diversity, the principles covered in
+this document — locality, hierarchy, abstraction, and concurrency — remain relevant across all of them.

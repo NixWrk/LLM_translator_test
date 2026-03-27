@@ -17,6 +17,8 @@
 - Java — можно установить (нужна для Okapi)
 - Скачивание моделей — ок, подключаем к существующему или своему коду
 - Форматирование документов **обязательно** сохраняется для всех форматов: PDF (searchable), MD, DOCX, XLSX, TXT
+- **Каждая модель/решение тестируется в своём изолированном venv** — создаётся через `envs/setup_envs.py`
+- **Все пакеты и модели — последние доступные версии** (последний PyPI-релиз, последний чекпоинт на HuggingFace)
 
 **Разработка ведётся на:** Windows 10, Python 3.11, RTX 4080 (16 GB)
 **Целевое железо:** CPU-only ПК, 8–16 GB RAM
@@ -43,20 +45,71 @@
 
 > **Java:** не установлена, но можно установить → открывает доступ к Okapi Framework (Document-Translation + Okapi) — лучший готовый стек для форматирования документов.
 
-## Что нужно установить
+## Изолированные окружения
+
+Каждое решение и каждая модель тестируются в **отдельном venv** с последними версиями пакетов.
+Это исключает конфликты зависимостей и обеспечивает воспроизводимость результатов.
+
+```
+envs/
+├── setup_envs.py              ← создаёт все окружения одной командой
+├── R1_argos/
+│   ├── requirements.txt       ← argostranslate==1.11.0 (latest)
+│   ├── venv/                  ← создаётся setup_envs.py (в .gitignore)
+│   └── requirements.lock      ← заморозка после установки
+├── R2_libretranslate/
+│   ├── requirements.txt       ← libretranslate==1.9.5 (latest)
+│   └── ...
+├── R4_okapi/
+│   ├── requirements.txt       ← requests (Python-мост к Okapi)
+│   └── ...
+├── M1_nllb/
+│   ├── requirements.txt       ← ctranslate2==4.7.1, sentencepiece==0.2.1 (latest)
+│   └── ...
+├── M2_opus_mt/
+│   ├── requirements.txt       ← ctranslate2==4.7.1, sentencepiece==0.2.1 (latest)
+│   └── ...
+├── M3_translategemma/
+│   ├── requirements.txt       ← llama-cpp-python==0.3.19 (latest)
+│   └── ...
+├── M4_madlad/
+│   ├── requirements.txt       ← ctranslate2==4.7.1 (latest)
+│   └── ...
+└── M5_m2m100/
+    ├── requirements.txt       ← ctranslate2==4.7.1 (latest)
+    └── ...
+```
 
 ```bash
-# Фаза 1 — готовые решения
-pip install argostranslate          # Argos Translate
-pip install libretranslate          # LibreTranslate (тот же Argos, но с REST API)
-# Java JDK 11+ — установить вручную (для Okapi Framework)
-# git clone https://github.com/kukas/document-translation
+# Создать все окружения (CPU build):
+python envs/setup_envs.py
 
-# Фаза 2 — лёгкие модели (если до неё дойдём)
-pip install ctranslate2 sentencepiece    # NLLB, OPUS-MT, MADLAD
-pip install sacrebleu                    # метрики качества (chrF2++)
-pip install python-docx                  # DOCX handler (Фаза 3)
-pip install llama-cpp-python             # TranslateGemma 4B GGUF (Фаза 2)
+# Создать одно окружение:
+python envs/setup_envs.py R1_argos
+
+# M3 с CUDA поддержкой (RTX 4080, dev-машина):
+python envs/setup_envs.py M3_translategemma --cuda
+
+# Проверить статус:
+python envs/setup_envs.py --list
+```
+
+> **Модели на HuggingFace:** всегда берём последний коммит (`revision="main"`).
+> Версия фиксируется в `requirements.lock` (git hash модели записывается в скрипте теста).
+
+## Что нужно установить вручную
+
+```bash
+# Java JDK 11+ (для Okapi Framework — R4):
+# Windows: https://adoptium.net/
+# После установки: java -version
+
+# Okapi Tikal CLI (для document-translation):
+# https://okapiframework.org/binaries/main/
+# Распаковать рядом: tools/okapi/
+
+# document-translation:
+# git clone https://github.com/kukas/document-translation tools/document-translation
 ```
 
 ---

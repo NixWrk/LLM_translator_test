@@ -1,0 +1,9 @@
+# R2 — LibreTranslate (self-hosted, Argos backend + REST API)
+# Latest: 1.9.5 (2025-03-28)
+# https://github.com/LibreTranslate/LibreTranslate
+libretranslate==1.9.5
+
+# Evaluation
+sacrebleu==2.6.0
+psutil==6.0.0
+requests==2.32.3

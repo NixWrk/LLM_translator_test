@@ -1,0 +1,25 @@
+# M3 — TranslateGemma 4B Q4_K_M via llama-cpp-python
+# Model GGUF: google/translate-gemma-4b-it (latest revision on HuggingFace)
+# https://huggingface.co/google/translate-gemma-4b-it
+#
+# llama-cpp-python latest: 0.3.19 (2025-03-28)
+#
+# IMPORTANT — GPU build on dev machine (RTX 4080):
+#   Windows:
+#     set CMAKE_ARGS=-DGGML_CUDA=on
+#     pip install llama-cpp-python==0.3.19 --force-reinstall --no-cache-dir
+#   Linux:
+#     CMAKE_ARGS="-DGGML_CUDA=on" pip install llama-cpp-python==0.3.19 --force-reinstall --no-cache-dir
+#
+# CPU-only build (target weak PC):
+#   pip install llama-cpp-python==0.3.19
+#
+# setup_envs.py installs CPU-only by default.
+# Run setup_envs.py --cuda to rebuild with CUDA support.
+
+llama-cpp-python==0.3.19
+huggingface_hub==0.30.1
+
+# Evaluation
+sacrebleu==2.6.0
+psutil==6.0.0

@@ -1,0 +1,15 @@
+# M2 — OPUS-MT via CTranslate2
+# Models (Helsinki-NLP on HuggingFace):
+#   EN->RU: Helsinki-NLP/opus-mt-tc-big-en-ru  (~300 MB)
+#   RU->EN: Helsinki-NLP/opus-mt-tc-big-ru-en  (~300 MB)
+# https://huggingface.co/Helsinki-NLP
+#
+# Smallest and fastest NMT baseline. Uses SentencePiece tokenizer.
+
+ctranslate2==4.7.1
+sentencepiece==0.2.1
+huggingface_hub==0.30.1
+
+# Evaluation
+sacrebleu==2.6.0
+psutil==6.0.0

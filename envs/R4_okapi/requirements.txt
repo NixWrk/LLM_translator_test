@@ -1,0 +1,14 @@
+# R4 — Document-Translation + Okapi Framework
+# Java JDK 11+ required (installed separately)
+# Okapi Tikal JAR: https://okapiframework.org/binaries/main/
+# document-translation: git clone https://github.com/kukas/document-translation
+#
+# This env provides the Python HTTP bridge to the MT backend (OPUS-MT or NLLB).
+# Okapi itself runs as a Java subprocess.
+
+# HTTP client for MT backend bridge
+requests==2.32.3
+
+# Evaluation
+sacrebleu==2.6.0
+psutil==6.0.0

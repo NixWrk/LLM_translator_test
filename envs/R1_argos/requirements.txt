@@ -1,0 +1,8 @@
+# R1 — Argos Translate
+# Latest: 1.11.0 (2025-03-28)
+# https://github.com/argosopentech/argos-translate
+argostranslate==1.11.0
+
+# Evaluation
+sacrebleu==2.6.0
+psutil==6.0.0

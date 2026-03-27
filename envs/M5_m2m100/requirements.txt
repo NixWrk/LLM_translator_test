@@ -1,0 +1,14 @@
+# M5 — M2M100-1.2B via CTranslate2
+# Model: facebook/m2m100_1.2B  (~5 GB fp16, ~2.5 GB int8)
+# https://huggingface.co/facebook/m2m100_1.2B
+#
+# 100 languages. Heavier than NLLB-600M, but potentially better quality.
+# Tested last — only if M1/M2/M3 are insufficient.
+
+ctranslate2==4.7.1
+sentencepiece==0.2.1
+huggingface_hub==0.30.1
+
+# Evaluation
+sacrebleu==2.6.0
+psutil==6.0.0

@@ -1,0 +1,27 @@
+# Virtual environments
+envs/*/venv/
+envs/*/venv-cuda/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+
+# Model weights (large binary files — храним отдельно)
+models/
+*.gguf
+*.bin
+*.safetensors
+*.pt
+*.ot
+
+# OS / editors
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# Results (large JSONs with raw outputs — не коммитим, только сводные таблицы)
+results/raw/

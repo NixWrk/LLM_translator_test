@@ -1,0 +1,14 @@
+# M4 — MADLAD-400-3B-MT via CTranslate2 int8
+# Model: google/madlad400-3b-mt  (~3 GB fp16, ~1.5 GB int8)
+# https://huggingface.co/google/madlad400-3b-mt
+#
+# Multilingual (400 languages). Good on long documents.
+# Run with inter_threads=4 on CPU for best throughput.
+
+ctranslate2==4.7.1
+sentencepiece==0.2.1
+huggingface_hub==0.30.1
+
+# Evaluation
+sacrebleu==2.6.0
+psutil==6.0.0

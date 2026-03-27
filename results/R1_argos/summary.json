@@ -1,0 +1,41 @@
+{
+  "model": "Argos Translate",
+  "version": "unknown",
+  "date": "2026-03-28 01:12",
+  "warmup_ms": 6673.7,
+  "peak_ram_mb": 1302.6,
+  "blocks": {
+    "A_words": {
+      "n": 50,
+      "chrf_mean": 87.1,
+      "chrf_min": 4.61,
+      "chrf_max": 100.0,
+      "time_total_ms": 1577.5,
+      "time_per_item_ms": 31.6
+    },
+    "B_sentences": {
+      "n": 30,
+      "chrf_mean": 83.6,
+      "chrf_min": 47.18,
+      "chrf_max": 100.0,
+      "time_total_ms": 4315.7,
+      "time_per_item_ms": 143.9
+    },
+    "C_paragraphs": {
+      "n": 10,
+      "chrf_mean": 76.22,
+      "chrf_min": 66.11,
+      "chrf_max": 84.43,
+      "time_total_ms": 15590.1,
+      "time_per_item_ms": 1559.0
+    },
+    "D_document": {
+      "paragraphs": 30,
+      "word_count_src": 2271,
+      "errors": 0,
+      "time_total_ms": 44731.3,
+      "words_per_sec": 50.8
+    }
+  },
+  "overall_chrf": 82.31
+}

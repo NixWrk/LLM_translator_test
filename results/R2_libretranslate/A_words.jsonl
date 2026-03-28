@@ -1,0 +1,50 @@
+{"id": "w001", "src_lang": "en", "tgt_lang": "ru", "source": "compiler", "hypothesis": "компилятор", "reference": "компилятор", "chrf": 100.0, "time_ms": 53.8}
+{"id": "w002", "src_lang": "en", "tgt_lang": "ru", "source": "bandwidth", "hypothesis": "пропускная способность", "reference": "пропускная способность", "chrf": 100.0, "time_ms": 50.0}
+{"id": "w003", "src_lang": "en", "tgt_lang": "ru", "source": "latency", "hypothesis": "задержка", "reference": "задержка", "chrf": 100.0, "time_ms": 43.0}
+{"id": "w004", "src_lang": "en", "tgt_lang": "ru", "source": "throughput", "hypothesis": "пропускная способность", "reference": "производительность", "chrf": 18.04, "time_ms": 40.4}
+{"id": "w005", "src_lang": "en", "tgt_lang": "ru", "source": "cache", "hypothesis": "кэш", "reference": "кэш", "chrf": 100.0, "time_ms": 42.2}
+{"id": "w006", "src_lang": "en", "tgt_lang": "ru", "source": "firmware", "hypothesis": "прошивка", "reference": "прошивка", "chrf": 100.0, "time_ms": 43.9}
+{"id": "w007", "src_lang": "en", "tgt_lang": "ru", "source": "interrupt", "hypothesis": "прерывание", "reference": "прерывание", "chrf": 100.0, "time_ms": 39.4}
+{"id": "w008", "src_lang": "en", "tgt_lang": "ru", "source": "scheduler", "hypothesis": "планировать", "reference": "планировщик", "chrf": 54.15, "time_ms": 30.1}
+{"id": "w009", "src_lang": "en", "tgt_lang": "ru", "source": "semaphore", "hypothesis": "семафор", "reference": "семафор", "chrf": 100.0, "time_ms": 48.0}
+{"id": "w010", "src_lang": "en", "tgt_lang": "ru", "source": "kernel", "hypothesis": "ядро", "reference": "ядро", "chrf": 100.0, "time_ms": 36.0}
+{"id": "w011", "src_lang": "en", "tgt_lang": "ru", "source": "overhead", "hypothesis": "над головой", "reference": "накладные расходы", "chrf": 6.03, "time_ms": 39.8}
+{"id": "w012", "src_lang": "en", "tgt_lang": "ru", "source": "bottleneck", "hypothesis": "узкое место", "reference": "узкое место", "chrf": 100.0, "time_ms": 58.4}
+{"id": "w013", "src_lang": "en", "tgt_lang": "ru", "source": "deployment", "hypothesis": "развертывание", "reference": "развёртывание", "chrf": 55.76, "time_ms": 32.7}
+{"id": "w014", "src_lang": "en", "tgt_lang": "ru", "source": "checksum", "hypothesis": "контрольная сумма", "reference": "контрольная сумма", "chrf": 100.0, "time_ms": 48.9}
+{"id": "w015", "src_lang": "en", "tgt_lang": "ru", "source": "handshake", "hypothesis": "рукопожатие", "reference": "квитирование", "chrf": 11.12, "time_ms": 55.0}
+{"id": "w016", "src_lang": "en", "tgt_lang": "ru", "source": "pipeline", "hypothesis": "трубопровод", "reference": "конвейер", "chrf": 4.98, "time_ms": 33.1}
+{"id": "w017", "src_lang": "en", "tgt_lang": "ru", "source": "routing", "hypothesis": "маршрутизация", "reference": "маршрутизация", "chrf": 100.0, "time_ms": 31.5}
+{"id": "w018", "src_lang": "en", "tgt_lang": "ru", "source": "encryption", "hypothesis": "шифрование", "reference": "шифрование", "chrf": 100.0, "time_ms": 43.7}
+{"id": "w019", "src_lang": "en", "tgt_lang": "ru", "source": "debugging", "hypothesis": "отладка", "reference": "отладка", "chrf": 100.0, "time_ms": 47.6}
+{"id": "w020", "src_lang": "en", "tgt_lang": "ru", "source": "concurrency", "hypothesis": "параллелизм", "reference": "параллелизм", "chrf": 100.0, "time_ms": 40.0}
+{"id": "w021", "src_lang": "en", "tgt_lang": "ru", "source": "scalability", "hypothesis": "масштабируемость", "reference": "масштабируемость", "chrf": 100.0, "time_ms": 48.0}
+{"id": "w022", "src_lang": "en", "tgt_lang": "ru", "source": "resilience", "hypothesis": "устойчивость", "reference": "отказоустойчивость", "chrf": 56.56, "time_ms": 42.1}
+{"id": "w023", "src_lang": "en", "tgt_lang": "ru", "source": "abstraction", "hypothesis": "абстракция", "reference": "абстракция", "chrf": 100.0, "time_ms": 57.4}
+{"id": "w024", "src_lang": "en", "tgt_lang": "ru", "source": "profiling", "hypothesis": "профилирование", "reference": "профилирование", "chrf": 100.0, "time_ms": 42.7}
+{"id": "w025", "src_lang": "en", "tgt_lang": "ru", "source": "payload", "hypothesis": "полезная нагрузка", "reference": "полезная нагрузка", "chrf": 100.0, "time_ms": 53.7}
+{"id": "w026", "src_lang": "ru", "tgt_lang": "en", "source": "компьютер", "hypothesis": "computer", "reference": "computer", "chrf": 100.0, "time_ms": 19.5}
+{"id": "w027", "src_lang": "ru", "tgt_lang": "en", "source": "программа", "hypothesis": "programme", "reference": "program", "chrf": 77.97, "time_ms": 16.0}
+{"id": "w028", "src_lang": "ru", "tgt_lang": "en", "source": "сеть", "hypothesis": "network", "reference": "network", "chrf": 100.0, "time_ms": 19.1}
+{"id": "w029", "src_lang": "ru", "tgt_lang": "en", "source": "память", "hypothesis": "memory", "reference": "memory", "chrf": 100.0, "time_ms": 22.2}
+{"id": "w030", "src_lang": "ru", "tgt_lang": "en", "source": "файл", "hypothesis": "file", "reference": "file", "chrf": 100.0, "time_ms": 20.0}
+{"id": "w031", "src_lang": "ru", "tgt_lang": "en", "source": "сервер", "hypothesis": "server", "reference": "server", "chrf": 100.0, "time_ms": 23.9}
+{"id": "w032", "src_lang": "ru", "tgt_lang": "en", "source": "процессор", "hypothesis": "processor", "reference": "processor", "chrf": 100.0, "time_ms": 20.4}
+{"id": "w033", "src_lang": "ru", "tgt_lang": "en", "source": "браузер", "hypothesis": "browser", "reference": "browser", "chrf": 100.0, "time_ms": 21.2}
+{"id": "w034", "src_lang": "ru", "tgt_lang": "en", "source": "клавиатура", "hypothesis": "keyboard", "reference": "keyboard", "chrf": 100.0, "time_ms": 27.7}
+{"id": "w035", "src_lang": "ru", "tgt_lang": "en", "source": "монитор", "hypothesis": "monitor", "reference": "monitor", "chrf": 100.0, "time_ms": 21.0}
+{"id": "w036", "src_lang": "ru", "tgt_lang": "en", "source": "алгоритм", "hypothesis": "algorithm", "reference": "algorithm", "chrf": 100.0, "time_ms": 20.5}
+{"id": "w037", "src_lang": "ru", "tgt_lang": "en", "source": "база данных", "hypothesis": "database", "reference": "database", "chrf": 100.0, "time_ms": 18.2}
+{"id": "w038", "src_lang": "ru", "tgt_lang": "en", "source": "протокол", "hypothesis": "protocol", "reference": "protocol", "chrf": 100.0, "time_ms": 14.7}
+{"id": "w039", "src_lang": "ru", "tgt_lang": "en", "source": "интерфейс", "hypothesis": "interface", "reference": "interface", "chrf": 100.0, "time_ms": 18.9}
+{"id": "w040", "src_lang": "ru", "tgt_lang": "en", "source": "обновление", "hypothesis": "renewal", "reference": "update", "chrf": 4.61, "time_ms": 18.4}
+{"id": "w041", "src_lang": "ru", "tgt_lang": "en", "source": "установка", "hypothesis": "installation", "reference": "installation", "chrf": 100.0, "time_ms": 24.7}
+{"id": "w042", "src_lang": "ru", "tgt_lang": "en", "source": "резервное копирование", "hypothesis": "backup", "reference": "backup", "chrf": 100.0, "time_ms": 24.3}
+{"id": "w043", "src_lang": "ru", "tgt_lang": "en", "source": "восстановление", "hypothesis": "recovery", "reference": "recovery", "chrf": 100.0, "time_ms": 21.2}
+{"id": "w044", "src_lang": "ru", "tgt_lang": "en", "source": "шифрование", "hypothesis": "encryption", "reference": "encryption", "chrf": 100.0, "time_ms": 24.0}
+{"id": "w045", "src_lang": "ru", "tgt_lang": "en", "source": "маршрутизатор", "hypothesis": "router", "reference": "router", "chrf": 100.0, "time_ms": 26.9}
+{"id": "w046", "src_lang": "ru", "tgt_lang": "en", "source": "операционная система", "hypothesis": "operating-system", "reference": "operating system", "chrf": 65.55, "time_ms": 26.6}
+{"id": "w047", "src_lang": "ru", "tgt_lang": "en", "source": "виртуализация", "hypothesis": "virtualization", "reference": "virtualization", "chrf": 100.0, "time_ms": 21.6}
+{"id": "w048", "src_lang": "ru", "tgt_lang": "en", "source": "контейнер", "hypothesis": "container", "reference": "container", "chrf": 100.0, "time_ms": 19.7}
+{"id": "w049", "src_lang": "ru", "tgt_lang": "en", "source": "отладчик", "hypothesis": "debugger", "reference": "debugger", "chrf": 100.0, "time_ms": 24.5}
+{"id": "w050", "src_lang": "ru", "tgt_lang": "en", "source": "компилятор", "hypothesis": "compiler", "reference": "compiler", "chrf": 100.0, "time_ms": 26.2}

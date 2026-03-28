@@ -1,0 +1,42 @@
+{
+  "model": "LibreTranslate",
+  "version": "unknown",
+  "date": "2026-03-28 09:27",
+  "startup_ms": 1028.4,
+  "warmup_ms": 571.9,
+  "peak_ram_mb": 108.5,
+  "blocks": {
+    "A_words": {
+      "n": 50,
+      "chrf_mean": 87.1,
+      "chrf_min": 4.61,
+      "chrf_max": 100.0,
+      "time_total_ms": 1642.6,
+      "time_per_item_ms": 32.9
+    },
+    "B_sentences": {
+      "n": 30,
+      "chrf_mean": 83.6,
+      "chrf_min": 47.18,
+      "chrf_max": 100.0,
+      "time_total_ms": 4166.7,
+      "time_per_item_ms": 138.9
+    },
+    "C_paragraphs": {
+      "n": 10,
+      "chrf_mean": 76.22,
+      "chrf_min": 66.11,
+      "chrf_max": 84.43,
+      "time_total_ms": 15125.3,
+      "time_per_item_ms": 1512.5
+    },
+    "D_document": {
+      "paragraphs": 30,
+      "word_count_src": 2271,
+      "errors": 0,
+      "time_total_ms": 42006.6,
+      "words_per_sec": 54.1
+    }
+  },
+  "overall_chrf": 82.31
+}
